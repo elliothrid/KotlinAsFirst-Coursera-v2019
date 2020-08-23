@@ -1,5 +1,6 @@
 package lesson1.task1
 
+import org.junit.Assert
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
@@ -104,5 +105,20 @@ class Tests {
     fun numberRevert() {
         assertEquals(874, numberRevert(478))
         assertEquals(201, numberRevert(102))
+    }
+}
+
+class HelloJunit5Test {
+
+    @org.junit.Test
+    fun `First test`() {
+        print("Hello, JUnit5!")
+    }
+}
+
+class TestsMax {
+    @Test
+    fun quadraticEquationRoot() {
+        assertEquals(2.0, quadraticEquationRoot(1.0, -3.0, 2.0), 1e-13)
     }
 }
